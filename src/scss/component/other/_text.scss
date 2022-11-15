@@ -4,6 +4,7 @@ h1{
   font-weight: 600;
   font-size: clamp(2.5rem, 10vw, 12rem);
   color: $color-primary;
+  margin-bottom: 20px;
 }
 
 h2{
@@ -28,8 +29,8 @@ h4{
 }
 
 p{
-  font-family: $fontRaleway;
-  font-weight: 300;
+
+
   font-size: 16px;
   color: $color-primary;
 }

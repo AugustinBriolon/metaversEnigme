@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
+import { BubblyLink } from "react-bubbly-transitions";
 
 
 export default function Nav() {
@@ -10,21 +11,20 @@ export default function Nav() {
     setShowLinks(!showLinks)
   }
 
-
   return (
-    <div>
-      <nav className={`${showLinks ? "showNav" : "hidden"} navbar`}>
+    <>
+      <nav className={`${showLinks ? "showNav" : "hidden"} navbar`} style={{ animationDelay: "800ms"}}>
         <div className="navBox">
-          <Link to="/" className='logoMetaverse' aria-label="Logo Principal Metaverse">
+          <BubblyLink to="/" className='logoMetaverse' aria-label="Logo Principal Metaverse" colorStart="#009FFF" colorEnd="#DF0FEB">
             <img src="/img/metaverse.webp" alt="logo Metaverse" />
-          </Link>
+          </BubblyLink>
         </div>
         <ul className="navListLinks">
           <li className="navItem navBox">
-            <Link to="/test1" className='navLinks' onClick={hangleShowLinks}>Test1</Link>
+            <BubblyLink to="/test1" className='navLinks' onClick={hangleShowLinks} colorStart="#009FFF" colorEnd="#DF0FEB" children="Test1"></BubblyLink>
           </li>
           <li className="navItem navBox">
-            <Link to="/test2" className='navLinks' onClick={hangleShowLinks}>Test2</Link>
+            <BubblyLink to="/test2" className='navLinks' onClick={hangleShowLinks} colorStart="#009FFF" colorEnd="#DF0FEB" children="Test2"></BubblyLink>
           </li>
         </ul>
         <button className='navBurger' onClick={hangleShowLinks} aria-label="BurgerLogo">
@@ -32,6 +32,6 @@ export default function Nav() {
         </button>
       </nav>
       <Outlet />
-    </div>
+    </>
   )
 }

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Nav from '../components/Nav/Nav'
+import Game from '../components/Game1/Game1'
 
 
 
@@ -8,8 +9,7 @@ export default function FirstTest() {
     <div className='section'>
 
       <Nav />
-      <h1>First Test Page</h1>
-      <input type="text" />
+      <Game />
 
     </div>
   )

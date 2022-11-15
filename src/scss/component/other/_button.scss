@@ -18,8 +18,11 @@
 
 .buttonPulse {
   padding: 12px 24px;
-  background-color: $color-primary;
-  color: $color-secondary;
+  background: rgb(0, 159, 255);  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #DF0FEB, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #DF0FEB, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: $color-primary;
+  width: fit-content;
   border-radius: 7px;
   box-shadow: 0 0 0 0 rgb(0 0 0 / 50%);
   animation: pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1);

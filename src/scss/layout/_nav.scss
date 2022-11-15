@@ -12,6 +12,7 @@
   color: $color-primary;
   border-bottom: 1px solid $color-primary;
   backdrop-filter: blur(20px);
+  animation: keyframePage 0.5s both;
 
   @include media-max(768px) {
     top: 35px;
@@ -21,17 +22,6 @@
 
   @include media-min(768px) {
     backdrop-filter: none;
-    background: #56ccf2; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to left,
-      #2f80ed,
-      #56ccf2
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to left,
-      #2f80ed,
-      #56ccf2
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 
   div {
@@ -99,17 +89,7 @@
       height: 100vh;
       padding: 2rem;
       visibility: hidden;
-      background: #56ccf2; /* fallback for old browsers */
-      background: -webkit-linear-gradient(
-        to left,
-        #2f80ed,
-        #56ccf2
-      ); /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(
-        to left,
-        #2f80ed,
-        #56ccf2
-      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: $color-secondary;
 
       transition: all 0.5s ease-out;
     }
@@ -122,15 +102,19 @@
           margin: 0 auto;
           width: 3vw;
           height: 1px;
-          background: #000;
+          background: $color-primary;
         }
       }
 
-      .navLinks {
+      .react-bubbly-transitions__bubbly-link {
         min-height: 75px;
         min-width: 100px;
         padding: 0 0.3rem;
         color: inherit;
+        font-family: $fontRaleway;
+        font-weight: 400;
+        font-size: 16px;
+        color: $color-primary;
 
         @include media-min(768px) {
           display: block;
@@ -171,7 +155,7 @@
         width: 40px;
         height: 3px;
         border-radius: 3px;
-        background: #000;
+        background: $color-primary;
         transition: all 0.3s ease;
       }
     }
@@ -417,3 +401,15 @@
           animation: animate-svg-fill-8 0.7s ease-in-out 1.5s both;
 }
 
+
+@keyframes keyframePage {
+  0% {
+    opacity: 0;
+    translate: 0 100%;
+  }
+
+  100% {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
