@@ -5,7 +5,10 @@ import {
   Route,
 } from "react-router-dom";
 import ReactDOM from 'react-dom/client';
+
 import './index.css';
+import './scss/styles.js';
+import './fonts/Aquire/Aquire.otf'
 import HomePage  from "./pages/HomePage";
 import FirstTest from "./pages/FirstTest";
 import SecondTest from "./pages/SecondTest";

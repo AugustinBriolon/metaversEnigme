@@ -1,0 +1,32 @@
+.button {
+  padding: 16px 32px;
+  text-align: center;
+  font-family: $fontRaleway;
+  font-weight: 400;
+  line-height: 16px;
+  border: 1px solid $color-primary;
+  display: block;
+  outline: none;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  background: transparent;
+  color: $color-primary;
+  width: fit-content;
+}
+
+
+.buttonPulse {
+  padding: 12px 24px;
+  background-color: $color-primary;
+  color: $color-secondary;
+  border-radius: 7px;
+  box-shadow: 0 0 0 0 rgb(0 0 0 / 50%);
+  animation: pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@keyframes pulse {
+  to {
+      box-shadow: 0 0 0 30px rgba(0, 0, 0, 0);
+  }
+}

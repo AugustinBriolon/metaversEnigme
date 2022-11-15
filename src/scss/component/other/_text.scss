@@ -1,0 +1,42 @@
+
+h1{
+  font-family: $fontRaleway;
+  font-weight: 600;
+  font-size: clamp(2.5rem, 10vw, 12rem);
+  color: $color-primary;
+}
+
+h2{
+  font-family: $fontRaleway;
+  font-weight: 500;
+  font-size: clamp(2.2rem, 3vw, 3.5rem);
+  color: $color-primary;
+}
+
+h3{
+  font-family: $fontRaleway;
+  font-weight: 600;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  color: $color-primary;
+}
+
+h4{
+  font-family: $fontRaleway;
+  font-weight: 400;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: $color-primary;
+}
+
+p{
+  font-family: $fontRaleway;
+  font-weight: 300;
+  font-size: 16px;
+  color: $color-primary;
+}
+
+a {
+  font-family: $fontRaleway;
+  font-weight: 400;
+  font-size: 16px;
+  color: $color-primary;
+}
