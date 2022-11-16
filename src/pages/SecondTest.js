@@ -1,12 +1,12 @@
-import { Link } from 'react-router-dom'
 import Nav from '../components/Nav/Nav'
+import Game from '../components/Game2/Game2'
 
 export default function SecondTest() {
   return (
     <div className='section'>
 
       <Nav />
-      <h1>Second Test Page</h1>
+      <Game />
 
     </div>
   )

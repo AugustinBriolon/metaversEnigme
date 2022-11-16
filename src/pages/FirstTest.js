@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import Nav from '../components/Nav/Nav'
 import Game from '../components/Game1/Game1'
 

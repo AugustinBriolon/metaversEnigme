@@ -1,16 +1,18 @@
 
-import { useRef } from 'react'
+import { useRef, useEffect, useState } from 'react'
+import { useNavigate } from "react-router-dom"
 
 export default function Game1() {
 
-
-
   const inputRef = useRef(null);
+  let navigate = useNavigate();
 
   function handleClick() {
     if (inputRef.current.value === 'row') {
       alert('Bonne réponse ! Vous obtenez votre indice : Indice');
-      console.log('1er indice !')
+      setTimeout(() => {
+        navigate('/test2')
+      }, 2000)
     } else if (inputRef.current.value === '') {
       alert('Veuillez entrer une réponse');
     } else {
