@@ -1,6 +1,7 @@
 import React from "react";
 import { questions } from "./Questions";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import imgEnd from '../../assets/img/Images_Meta.png'
 
 export default function App() {
   const [currentQuestion, setCurrentQuestion] = React.useState(0);

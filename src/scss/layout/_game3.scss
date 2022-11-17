@@ -13,6 +13,8 @@
   position: relative;
   top: 5%;
   left: 50%;
+  margin-top: -200px;
+  
 }
 
 .texte{
@@ -79,10 +81,16 @@
   margin-bottom: 30px;
 }
 
+img{
+  width: 300px;
+  margin-top: 15px;
+}
+
 @media all and (max-width: 700px) {
   .app {
     padding: 5px;
     width: 90%;
+    margin-top: -200px;
   }
   .question {
     font-size: 30px;
