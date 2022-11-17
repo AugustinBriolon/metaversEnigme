@@ -7,6 +7,7 @@ export default function App() {
   const [score, setScore] = React.useState(0);
   const [showScore, setShowScore] = React.useState(false);
   let navigate = useNavigate();
+  console.log(questions[currentQuestion].questionImage);
 
   const handleClick = (isCorrect) => {
     if (isCorrect) {
@@ -28,7 +29,8 @@ export default function App() {
     <div className="app">
       {showScore ? (
         <section className="showScore-section">
-          <p className="paragraph">Your score is {score} out of {questions.length}</p>
+          <p>Test fini</p>
+          <p className="paragraph">Votre score est de {score} sur {questions.length}</p>
         </section>
       ) : (
         <>
@@ -37,6 +39,7 @@ export default function App() {
               Question {currentQuestion + 1}/{questions.length}
             </h1>
             <p className="paragraph">{questions[currentQuestion].questionText}</p>
+            <img src={questions[currentQuestion].questionImage}></img>
           </div>
 
           <div className="answer-section">
