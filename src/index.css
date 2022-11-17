@@ -3,3 +3,13 @@
   margin: 0 auto;
   padding: 80px clamp(20px,5vw,130px);
 }
+
+.texte{
+  margin-top: 1000px;
+  color: white;
+  position: absolute;
+  z-index: 1;
+}
+
+
+
