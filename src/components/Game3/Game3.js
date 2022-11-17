@@ -37,6 +37,7 @@ export default function App() {
               Question {currentQuestion + 1}/{questions.length}
             </h1>
             <p className="paragraph">{questions[currentQuestion].questionText}</p>
+            <img src={questions[currentQuestion].questionImage}></img>
           </div>
 
           <div className="answer-section">

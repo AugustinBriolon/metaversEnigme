@@ -1,39 +1,32 @@
 export const questions = [
     {
-      questionText: "What is the capital of France?",
+      questionText: "A quelle entreprise correspond ce logo ?",
+      questionImage: "./asset/mcdo.png",
+
       answerOptions: [
-        { answerText: "New York", isCorrect: false },
-        { answerText: "London", isCorrect: false },
-        { answerText: "Paris", isCorrect: true },
-        { answerText: "Dublin", isCorrect: false },
+        { answerText: "Power Point", isCorrect: false },
+        { answerText: "Google Sheet", isCorrect: false },
+        { answerText: "Microsoft Word", isCorrect: true },
+        { answerText: "Photoshop", isCorrect: false },
       ],
     },
     {
-      questionText: "Who is CEO of Tesla?",
+      questionText: "A quelle entreprise correspond ce logo ?",
       answerOptions: [
-        { answerText: "Jeff Bezos", isCorrect: false },
-        { answerText: "Elon Musk", isCorrect: true },
-        { answerText: "Bill Gates", isCorrect: false },
-        { answerText: "Tony Stark", isCorrect: false },
+        { answerText: "IIM", isCorrect: false },
+        { answerText: "McDo", isCorrect: true },
+        { answerText: "EMLV", isCorrect: false },
+        { answerText: "ESILV", isCorrect: false },
       ],
     },
     {
-      questionText: "The iPhone was created by which company?",
+      questionText: "A quelle entreprise correspond ce logo ?",
       answerOptions: [
-        { answerText: "Apple", isCorrect: true },
+        { answerText: "Adobe XD", isCorrect: true },
         { answerText: "Intel", isCorrect: false },
-        { answerText: "Amazon", isCorrect: false },
+        { answerText: "Adobe Illustrator", isCorrect: false },
         { answerText: "Microsoft", isCorrect: false },
       ],
-    },
-    {
-      questionText: "How many Harry Potter books are there?",
-      answerOptions: [
-        { answerText: "1", isCorrect: false },
-        { answerText: "4", isCorrect: false },
-        { answerText: "6", isCorrect: false },
-        { answerText: "7", isCorrect: true },
-      ],
-    },
+    }
   ];
   
