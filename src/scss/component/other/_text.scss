@@ -35,9 +35,9 @@ p{
   color: $color-primary;
 }
 
-a {
-  font-family: $fontRaleway;
+a , button{
+  font-family: $fontRaleway !important;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 16px !important;
   color: $color-primary;
 }

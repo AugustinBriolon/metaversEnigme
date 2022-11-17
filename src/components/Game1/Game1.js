@@ -20,13 +20,20 @@ export default function Game1() {
     }
   }
 
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
   return (
     <div>
 
-      <div className='input'>
+      <button onClick={topFunction} className="button" id='myBtn' title="Go to top">Top</button>
+
+      <form className='input'>
         <input type="text" placeholder='Votre réponse' ref={inputRef} id="message" name="message" />
         <button onClick={handleClick} className="button">Valider</button>
-      </div>
+      </form>
 
       <h1>La base du développment Web</h1>
       <h2>Si vous voulez découvrir le secret de IIMVERSE, il vous faudra passer ce premier test :</h2>

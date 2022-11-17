@@ -16,7 +16,8 @@
 }
 
 
-.buttonPulse {
+.buttonPulse,
+.react-bubbly-transitions__bubbly-link {
   padding: 12px 24px;
   background: rgb(0, 159, 255);  /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #DF0FEB, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
