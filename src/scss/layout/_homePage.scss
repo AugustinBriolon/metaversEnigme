@@ -9,6 +9,17 @@ video {
   z-index: -56;
 }
 
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -50;
+  background: rgba(0, 0, 0, 0.5);
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -17,6 +28,10 @@ video {
   text-align: center;
   height: 80vh;
   width: 100%;
+
+  .textHome {
+    line-height: 30px;
+  }
 
   button {
     margin-top: 50px;

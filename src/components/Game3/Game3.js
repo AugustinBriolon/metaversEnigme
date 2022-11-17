@@ -21,7 +21,7 @@ export default function App() {
     } else {
       setShowScore(true);
       setTimeout(() => {
-        navigate('/test2')
+        navigate('/test3')
       }, 2000)
     }
   };

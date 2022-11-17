@@ -10,7 +10,7 @@ export default function Game1() {
   function handleClick() {
     if (inputRef.current.value === 'row' || inputRef.current.value === 'Row' || inputRef.current.value === 'row ' || inputRef.current.value === 'Row ') {
       alert('Bonne réponse ! Vous obtenez votre indice : Indice');
-      navigate('/test3')
+      navigate('/test2')
       // setTimeout(() => {
       // }, 2000)
     } else if (inputRef.current.value === '') {

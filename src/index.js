@@ -23,8 +23,8 @@ root.render(
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/test1" element={<FirstTest />} />
-      <Route path="/test2" element={<SecondTest />} />
-      <Route path="/test3" element={<ThirdTest />} />
+      <Route path="/test2" element={<ThirdTest />} />
+      <Route path="/test3" element={<SecondTest />} />
     </Routes>
   </BrowserRouter>,
   root
