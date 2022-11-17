@@ -13,9 +13,24 @@
   }
 }
 
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+  height: 60vh;
+
+  #message {
+    margin: 10px 0;
+    padding: 16px 32px;
+    width: 40vw;
+  }
+}
+
 
 .containerCenter {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
@@ -45,9 +60,4 @@
     width: 50px;
     background-color: black;
   }
-}
-
-#message {
-  margin: 10px 0;
-  width: 40vw;
 }

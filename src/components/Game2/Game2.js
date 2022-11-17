@@ -12,11 +12,13 @@ export default function Game2() {
   return (
     <div>
       <h1>Comprendre Unity</h1>
-      <h2>Si vous voulez découvrir le secret de IIMVERSE, il vous faudra passer ce deuxième test :</h2>
+      <h2>Si vous voulez découvrir le secret de IIMVERSE, il vous faudra passer ce deuxième test !</h2>
+
 
       <div className="containerCenter">
 
-        <Unity unityProvider={unityProvider} style={{ width: 800, height: 600, background: "black", justifySelf: "center", alignSelf: "center" }} />
+      <h2>Cliquer sur les étapes de modélisation dans le sens de leur création :</h2>
+      <Unity unityProvider={unityProvider} style={{ width: 800, height: 600, background: "black", justifySelf: "center", marginTop: 50 }} />
 
       </div>
 

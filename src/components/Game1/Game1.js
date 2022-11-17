@@ -1,5 +1,5 @@
 
-import { useRef, useEffect, useState } from 'react'
+import { useRef } from 'react'
 import { useNavigate } from "react-router-dom"
 
 export default function Game1() {
@@ -8,11 +8,11 @@ export default function Game1() {
   let navigate = useNavigate();
 
   function handleClick() {
-    if (inputRef.current.value === 'row') {
+    if (inputRef.current.value === 'row' || inputRef.current.value === 'Row' || inputRef.current.value === 'row ' || inputRef.current.value === 'Row ') {
       alert('Bonne réponse ! Vous obtenez votre indice : Indice');
-      setTimeout(() => {
-        navigate('/test2')
-      }, 2000)
+      navigate('/test2')
+      // setTimeout(() => {
+      // }, 2000)
     } else if (inputRef.current.value === '') {
       alert('Veuillez entrer une réponse');
     } else {
@@ -22,9 +22,19 @@ export default function Game1() {
 
   return (
     <div>
-      <h1>La base du développment Web</h1>
 
+      <div className='input'>
+        <input type="text" placeholder='Votre réponse' ref={inputRef} id="message" name="message" />
+        <button onClick={handleClick} className="button">Valider</button>
+      </div>
+
+      <h1>La base du développment Web</h1>
       <h2>Si vous voulez découvrir le secret de IIMVERSE, il vous faudra passer ce premier test :</h2>
+
+      <div>
+        <p>Quelle propriété permet de placer les éléments sur une seule ligne grace à flex-direction ?</p>
+
+      </div>
 
       <div className='container'>
 
@@ -64,16 +74,7 @@ export default function Game1() {
       <hr />
 
       <div className='container'>
-        <p>Bon, maintenant que vous savez tous cela, voyons voir si avez compris :</p>
-      </div>
-
-      <div className='question'>
-
-        <p>Quelle propriété permet de placer les éléments sur une seule ligne grace à flex-direction ?</p>
-
-        <input type="text" placeholder='Votre réponse' ref={inputRef} id="message" name="message" />
-        <button onClick={handleClick} className="button">Valider</button>
-
+        <h2>Quelle propriété permet de placer les éléments sur une seule ligne grace à flex-direction ?</h2>
       </div>
 
     </div>
