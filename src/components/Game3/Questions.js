@@ -1,7 +1,9 @@
+import imgMcDo from './asset/mcdo.png'
+
 export const questions = [
     {
       questionText: "A quelle entreprise correspond ce logo ?",
-      questionImage: "./asset/mcdo.png",
+      questionImage: {imgMcDo},
 
       answerOptions: [
         { answerText: "Power Point", isCorrect: false },
