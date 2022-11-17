@@ -1,12 +1,12 @@
 import React from "react";
-import "./App.css";
 import { questions } from "./Questions";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom"
 
 export default function App() {
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const [score, setScore] = React.useState(0);
   const [showScore, setShowScore] = React.useState(false);
+  let navigate = useNavigate();
 
   const handleClick = (isCorrect) => {
     if (isCorrect) {
@@ -18,6 +18,9 @@ export default function App() {
       setCurrentQuestion(nextQuestion);
     } else {
       setShowScore(true);
+      setTimeout(() => {
+        navigate('/test2')
+      }, 2000)
     }
   };
 
@@ -29,20 +32,20 @@ export default function App() {
         </section>
       ) : (
         <>
-          <section className="question-section">
+          <div className="question-section">
             <h1 className="question">
               Question {currentQuestion + 1}/{questions.length}
             </h1>
             <p className="paragraph">{questions[currentQuestion].questionText}</p>
-          </section>
+          </div>
 
-          <section className="answer-section">
+          <div className="answer-section">
             {questions[currentQuestion].answerOptions.map((item) => (
-              <button onClick={() => handleClick(item.isCorrect)}>
+              <button onClick={() => handleClick(item.isCorrect)} className="choice">
                 {item.answerText}
               </button>
             ))}
-          </section>
+          </div>
         </>
       )}
     </div>
