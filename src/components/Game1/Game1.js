@@ -1,4 +1,3 @@
-
 import { useRef } from 'react'
 import { useNavigate } from "react-router-dom"
 
@@ -9,7 +8,7 @@ export default function Game1() {
 
   function handleClick() {
     if (inputRef.current.value === 'row' || inputRef.current.value === 'Row' || inputRef.current.value === 'row ' || inputRef.current.value === 'Row ') {
-      alert('Bonne réponse ! Vous obtenez votre indice : Indice');
+      alert('Bonne réponse ! Vous obtenez votre indice : Developpeur');
       navigate('/test2')
       // setTimeout(() => {
       // }, 2000)
@@ -29,6 +28,10 @@ export default function Game1() {
     <div>
 
       <button onClick={topFunction} className="button" id='myBtn' title="Go to top">Top</button>
+
+      <div className='container'>
+        <h2>Quelle propriété permet de placer les éléments sur une seule ligne grace à flex-direction ?</h2>
+      </div>
 
       <form className='input'>
         <input type="text" placeholder='Votre réponse' ref={inputRef} id="message" name="message" />
@@ -79,10 +82,6 @@ export default function Game1() {
       </div>
 
       <hr />
-
-      <div className='container'>
-        <h2>Quelle propriété permet de placer les éléments sur une seule ligne grace à flex-direction ?</h2>
-      </div>
 
     </div>
   )

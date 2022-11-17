@@ -15,6 +15,7 @@ import HomePage  from "./pages/HomePage";
 import FirstTest from "./pages/FirstTest";
 import SecondTest from "./pages/SecondTest";
 import ThirdTest from "./pages/ThirdTest";
+import SucessPage from "./pages/SucessPage";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,6 +26,7 @@ root.render(
       <Route path="/test1" element={<FirstTest />} />
       <Route path="/test2" element={<ThirdTest />} />
       <Route path="/test3" element={<SecondTest />} />
+      <Route path="/sucess" element={<SucessPage />} />
     </Routes>
   </BrowserRouter>,
   root

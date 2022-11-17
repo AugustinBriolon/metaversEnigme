@@ -36,7 +36,6 @@ export default function App() {
         }, 2000);
       }
     }
-
   };
 
   return (
@@ -46,7 +45,7 @@ export default function App() {
       {showScore ? (
         <div className="showScore-section">
           <h3>Votre score est de {score} sur {questions.length}</h3>
-          {score < 2 ? <h3>Recommencer !</h3> : <h3>Bravo !</h3>}
+          {score < 2 ? <h3>Recommencer !</h3> : <h3>L'indice est : Creation</h3> }
         </div>
       ) : (
         <>
