@@ -1,13 +1,13 @@
 import React from "react";
+import { useState } from "react";
 import { questions } from "./Questions";
 import { useNavigate } from "react-router-dom"
 
 export default function App() {
-  const [currentQuestion, setCurrentQuestion] = React.useState(0);
-  const [score, setScore] = React.useState(0);
-  const [showScore, setShowScore] = React.useState(false);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [score, setScore] = useState(0);
+  const [showScore, setShowScore] = useState(false);
   let navigate = useNavigate();
-  console.log(questions[currentQuestion].questionImage);
 
   const handleClick = (isCorrect) => {
     if (isCorrect) {
@@ -15,39 +15,62 @@ export default function App() {
     }
 
     const nextQuestion = currentQuestion + 1;
+
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
     } else {
       setShowScore(true);
-      setTimeout(() => {
-        navigate('/test3')
-      }, 2000)
     }
+
+    console.log(currentQuestion);
+    console.log(score);
+
+    if (currentQuestion === 2) {
+      if (score === 2) {
+        setTimeout(() => {
+          navigate("/test3")
+        }, 2000);
+      } else {
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
+      }
+    }
+
   };
 
   return (
-    <div className="app">
+    <div className="container3">
+      <h1 className='quizz'>QUIZZ CD</h1>
+      <h3 className='last'>Dernière étape pour percer le secret de IIMVERSE, en serez-vous capable ?</h3>
       {showScore ? (
-        <section className="showScore-section">
-          <p>Test fini</p>
-          <p className="paragraph">Votre score est de {score} sur {questions.length}</p>
-        </section>
+        <div className="showScore-section">
+          <h3>Votre score est de {score} sur {questions.length}</h3>
+          {score < 2 ? <h3>Recommencer !</h3> : <h3>Bravo !</h3>}
+        </div>
       ) : (
         <>
-          <div className="question-section">
-            <h1 className="question">
-              Question {currentQuestion + 1}/{questions.length}
-            </h1>
-            <p className="paragraph">{questions[currentQuestion].questionText}</p>
+          <div className="app">
             <img src={questions[currentQuestion].questionImage}></img>
-          </div>
 
-          <div className="answer-section">
-            {questions[currentQuestion].answerOptions.map((item) => (
-              <button onClick={() => handleClick(item.isCorrect)} className="choice">
-                {item.answerText}
-              </button>
-            ))}
+            <div>
+              <div className="question-section">
+                <h1 className="question">
+                  Question {currentQuestion + 1}/{questions.length}
+                </h1>
+                <p className="paragraph">{questions[currentQuestion].questionText}</p>
+              </div>
+
+              <div className="answer-section">
+
+                {questions[currentQuestion].answerOptions.map((item) => (
+                  <button onClick={() => handleClick(item.isCorrect)} className="choice">
+                    {item.answerText}
+                  </button>
+                ))}
+
+              </div>
+            </div>
           </div>
         </>
       )}
