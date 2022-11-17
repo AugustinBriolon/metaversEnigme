@@ -21,7 +21,7 @@ export default function Game2() {
       <h2>Cliquer sur les étapes de modélisation dans le sens de leur création :</h2>
       <Unity unityProvider={unityProvider} style={{ width: 800, height: 600, background: "black", justifySelf: "center", marginTop: 50, marginBottom: 50 }} />
 
-      <BubblyLink to="/sucess" className='buttonPulse' colorStart="#009FFF" colorEnd="#DF0FEB" children="Cliquer pour"></BubblyLink>
+      <BubblyLink to="/sucess" className='buttonPulse' colorStart="#009FFF" colorEnd="#DF0FEB" children="Final"></BubblyLink>
 
       </div>
 
