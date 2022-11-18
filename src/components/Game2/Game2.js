@@ -13,7 +13,7 @@ export default function Game2() {
   return (
     <div>
       <h1>Comprendre Unity</h1>
-      <h2>Si vous voulez découvrir le secret de IIMVERSE, il vous faudra passer ce deuxième test !</h2>
+      <h2>Si vous voulez découvrir le secret de IIMVERSE, il vous faudra passer ce dernier test !</h2>
 
 
       <div className="containerCenter">

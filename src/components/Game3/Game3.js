@@ -22,10 +22,8 @@ export default function App() {
       setShowScore(true);
     }
 
-    console.log(currentQuestion);
-    console.log(score);
 
-    if (currentQuestion === 2) {
+    if (nextQuestion === 3){ 
       if (score === 2) {
         setTimeout(() => {
           navigate("/test3")
@@ -36,43 +34,48 @@ export default function App() {
         }, 2000);
       }
     }
+  console.log('/////');
+  console.log(nextQuestion);
+  console.log('/////');
+  console.log(score);
   };
 
-  return (
-    <div className="container3">
-      <h1 className='quizz'>QUIZZ CD</h1>
-      <h3 className='last'>Dernière étape pour percer le secret de IIMVERSE, en serez-vous capable ?</h3>
-      {showScore ? (
-        <div className="showScore-section">
-          <h3>Votre score est de {score} sur {questions.length}</h3>
-          {score < 2 ? <h3>Recommencer !</h3> : <h3>L'indice est : Creation</h3> }
-        </div>
-      ) : (
-        <>
-          <div className="app">
-            <img src={questions[currentQuestion].questionImage}></img>
 
-            <div>
-              <div className="question-section">
-                <h1 className="question">
-                  Question {currentQuestion + 1}/{questions.length}
-                </h1>
-                <p className="paragraph">{questions[currentQuestion].questionText}</p>
-              </div>
+return (
+  <div className="container3">
+    <h1 className='quizz'>QUIZZ CD</h1>
+    <h3 className='last'>Seconde étape pour percer le secret de IIMVERSE, en serez-vous capable ?</h3>
+    {showScore ? (
+      <div className="showScore-section">
+        <h3>Votre score est de {score} sur {questions.length}</h3>
+        {score < 3 ? <h3>Recommencer !</h3> : <h3>L'indice est : Design</h3>}
+      </div>
+    ) : (
+      <>
+        <div className="app">
+          <img src={questions[currentQuestion].questionImage}></img>
 
-              <div className="answer-section">
+          <div>
+            <div className="question-section">
+              <h1 className="question">
+                Question {currentQuestion + 1}/{questions.length}
+              </h1>
+              <p className="paragraph">{questions[currentQuestion].questionText}</p>
+            </div>
 
-                {questions[currentQuestion].answerOptions.map((item) => (
-                  <button onClick={() => handleClick(item.isCorrect)} className="choice">
-                    {item.answerText}
-                  </button>
-                ))}
+            <div className="answer-section">
 
-              </div>
+              {questions[currentQuestion].answerOptions.map((item) => (
+                <button onClick={() => handleClick(item.isCorrect)} className="choice">
+                  {item.answerText}
+                </button>
+              ))}
+
             </div>
           </div>
-        </>
-      )}
-    </div>
-  );
+        </div>
+      </>
+    )}
+  </div>
+);
 }

@@ -6,7 +6,6 @@ export default function Sucess() {
   const inputRef = useRef(null);
   const inputRef2 = useRef(null);
   const inputRef3 = useRef(null);
-  let navigate = useNavigate();
 
   function handleClick() {
     if (inputRef2.current.value === 'modelisation' || inputRef2.current.value === 'modelisation ' || inputRef2.current.value === 'Modelisation ' || inputRef2.current.value === 'Modelisation ') {
