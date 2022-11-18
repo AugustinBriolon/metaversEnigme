@@ -34,10 +34,6 @@ export default function App() {
         }, 2000);
       }
     }
-  console.log('/////');
-  console.log(nextQuestion);
-  console.log('/////');
-  console.log(score);
   };
 
 
